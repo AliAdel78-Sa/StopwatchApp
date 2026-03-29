@@ -18,6 +18,9 @@ namespace Stopwatcher.utils {
     }
 
     public static StopWatchModel RetrieveStopWatchData() {
+      if (!File.Exists(Constants.JsonFile)) {
+        SaveStopWatchData(new StopWatchModel());
+      }
       string jsonString = File.ReadAllText(Constants.JsonFile);
       StopWatchModel stopWatchModel = JsonSerializer.Deserialize<StopWatchModel>(jsonString)!;
       return stopWatchModel;
