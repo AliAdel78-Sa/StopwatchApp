@@ -16,7 +16,7 @@ A lightweight command-line stopwatch built in C# with persistent state — pick 
 | `S` | Start / Resume |
 | `P` | Pause          |
 | `R` | Reset          |
-| `Q` | Quit & Save    |
+| `Q` | Save & Quit    |
 
 ## Requirements
 
